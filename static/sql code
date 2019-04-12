@@ -1,0 +1,20 @@
+CREATE TABLE POLICE_RECORDS
+   (officer_id INT(20),
+   officer_first_name CHAR(20),
+   officer_last_name CHAR(20),
+   officer_state CHAR(20),
+   officer_age INT(2),
+   officer_ethnicity CHAR(20), 
+   officer_time_on_force VARCHAR(20),
+   crime_description VARCHAR(50),
+   crime_category CHAR(20),
+   officer_punishment VARCHAR(20),
+   officer_current_status VARCHAR(20),
+   victim_first_name CHAR(20),
+   victim_last_name CHAR(20),
+   victim_age INT(2),
+   victim_ethnicity CHAR(20),
+   other_details VARCHAR(30));
+
+ INSERT INTO POLICE_RECORDS (officer_id, officer_first_name, officer_last_name, officer_state, officer_age, officer_ethnicity, officer_time_on_force, crime_description, crime_category, officer_punishment, officer_current_status, victim_first_name, victim_last_name, victim_age, victim_ethnicity, other_details)
+ VALUES (44, Fred, George, CA, 44, White, 4 years, Killed someone, Murder, 40 years in prison, unemployed, George, Fred, 22, White, N/A);

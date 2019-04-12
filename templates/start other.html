@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--<title>Police misconduct database</title>-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Basic stylesheet includes DO NOT REMOVE-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="/static/myScript.js" charset="utf-8"></script>
+ 
+  
+</head>
+<body >
+	<div class="row">
+	<div class="topSection" style="background-color:#ddd;">
+	<nav class="navbar navbar-inverse">	
+	<div class="container-fluid">
+	
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+		<li class="active"><a href="#">Home</a></li>
+        <li><a href=href="#" data-toggle="modal" data-target="#loginPopup">Update Database</a></li>
+		<div class="modal fade" id="loginPopup" role="dialog">
+			<form class="login-modal-content animate"  action="/login">
+			<div class="container">
+				<h3>Enter admin credentials</h3>
+				<br>
+				<div>
+					<label for="username">Username:</label>
+					<input type="text" placeholder="Enter Username" id="username" name="username" minlength="6" required>
+				</div>
+				<br>
+
+				<div>
+					<label for="pass">Password:</label>
+					<input type="password" placeholder="Enter Password" id="pass" name="password" minlength="8" required>
+				</div>
+				<br>
+				<button type="submit">Sign in</button>
+				<button type="button" onclick="closeForm()" class="cancelbtn">Cancel</button>
+			</div>
+			</form>
+		</div> 	
+		 <li><a href="#" data-toggle="modal" data-target="#idAbout"> About</a></li>
+			<div class="modal fade" id="idAbout" role="dialog">
+				<!-- Modal content-->
+					<div class="about-modal-content">
+						<div class="about-modal-header">
+							<button type="button" class="close" data-dismiss="modal">&times;</button>
+							<h4 class="modal-title">About this site</h4>
+						</div>
+						<div class="modal-body">
+							<p>This site provides a mechanism to check background information on officers.</p>
+							<p>Disclaimer:- The way to use the site and it's information is left to the discretion of the user.</p>
+							</p>
+							</p>
+							</p>
+							</p>
+							<p style="color:green;">Author:- Sami Iyengar</p>
+						</div>
+
+					</div>
+			</div>
+		
+	  </ul>
+    </div>
+  </div>
+</nav>
+</div>
+</div>
+
+<div class="bodyHdr">
+	<h1  style="color:black;font-size:250%;font-family: serif;text-align:center;">Police Misconduct Database</h1>
+	<p style="color:black;text-align:center;">A nationwide database of police enrollment records</p>
+	<br><br><br><br>
+</div>
+ 
+<div class="bottomSection">
+	<div class=icon1>
+	  <p>
+		<a href="https://www.w3schools.com">
+			<img border="0" class=image1 src="/static/search_icon.png" alt="Avatar">
+		</a>
+	  </p>
+	</div>
+
+
+	<div class=icon1>
+	  <p>
+		<a href="https://www.google.com">
+			<img border="0" class=image1 src="/static/location_icon.png" alt="Avatar">	
+		</a>
+	  </p>
+	</div>
+
+	<div class=icon1>
+	  <p>
+		<a href="https://www.w3schools.com">
+			<img border="0" class=image1 src="/static/name_icon.png" alt="Avatar">
+		</div>
+		</a>
+	  </p>
+	</div>
+</div>
+
+</body>
+</html>
+
+
+
+
+

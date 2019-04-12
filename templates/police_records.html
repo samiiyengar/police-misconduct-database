@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+</head>
+<body>
+<table id="employees" style="width:100%">
+    {% if result %}
+    <tr>
+        <th>Officer ID</th>
+        <th>Officer First Name</th>
+        <th>Officer Last Name</th>
+        <th>Officer State</th>
+        <th>Officer Age</th>
+        <th>Officer Ethnicity</th>
+        <th>Officer Time on Force</th>
+        <th>Crime Description</th>
+        <th>Crime Category</th>
+        <th>Officer Punishment</th>
+        <th>Officer Current Status</th>
+        <th>Victim First Name</th>
+        <th>Victim Last Name</th>
+        <th>Victim Age</th>
+        <th>Victim Ethnicity</th>
+        <th>Other Details</th>
+    </tr>
+    {% for row in result %}
+    <tr>
+        <td> {{row.officer_id }} </td>
+        <td> {{row.officer_first_name }} </td>
+        <td> {{row.officer_last_name }} </td>
+        <td> {{row.officer_state}} </td>
+        <td> {{row.officer_age}} </td>
+        <td> {{row.officer_ethnicity}} </td>
+        <td> {{row.officer_time_on_force}} </td>
+        <td> {{row.crime_description}} </td>
+        <td> {{row.crime_category}} </td>
+        <td> {{row.officer_punishment}} </td>
+        <td> {{row.officer_current_status}} </td>
+        <td> {{row.victim_first_name}} </td>
+        <td> {{row.victim_last_name}} </td>
+        <td> {{row.victim_age}} </td>
+        <td> {{row.victim_ethnicity}} </td>
+        <td> {{row.other_details}} </td>
+    </tr>
+    {% endfor %}
+    {% endif %}
+</table>
+</body>
+</html>
