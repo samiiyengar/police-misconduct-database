@@ -1,6 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+
+{% block head %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -9,9 +8,11 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="/static/myScript.js" charset="utf-8"></script>
-</head>
-
-<body >
+{% endblock %}
+{% block body %}
+{% if session['logged_in'] %}
+You're logged in already!
+{% else %}
 <div class="row">
   <div class="topSection" style="background-color:#ddd;">
     <nav class="navbar navbar-inverse">	
@@ -27,7 +28,7 @@
 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-		<li class="active"><a href="/">Home</a></li>
+		<li class="active"><a  href="/">Home</a></li>
 	  </ul>
     </div>
   </div>
@@ -41,17 +42,19 @@
 </div>
  
 <div class="center">
-	<form action="/search/id" method = "POST">
-	  <label for="search">Officer ID</label><br><br>
-	  <input type="text" id="id1" name="id1" placeholder="Officer ID..."  pattern="\d{5}N\d{5}"><br><br><br>
-	  <input type="submit" value="Search">
-	</form>	 
+	<form action="/login" method="POST">
+		<div class="login">
+			<div class="app-title">
+				<h2>Enter Admin Credentials</h2>
+        <br>
+			</div>
+			<div class="login-form">
+				<input type="text" class="login-field" value="" placeholder="username" name="username"><br><br>
+				<input type="password" class="login-field" value="" placeholder="password" name="password"><br><br>
+				<input type="submit" value="Log in" class="btn btn-primary  btn-block">	 
+			</div>
+		</div>
+	</form>
 </div>
-
-</body>
-</html>
-
-
-
-
-
+{% endif %}
+{% endblock %}

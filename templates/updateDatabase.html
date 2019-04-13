@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="/static/myScript.js" charset="utf-8"></script>
+</head>
+
+<body >
+<div class="row">
+	<div class="topSection" style="background-color:#ddd;">
+		<nav class="navbar navbar-inverse">	
+			<div class="container-fluid">
+				<div class="collapse navbar-collapse" id="myNavbar">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="/">Home</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+</div>
+
+<div class="bodyHdr">
+	<h1  style="color:black;font-size:250%;font-family: 'Open Sans', Sans-serif;text-align:center;">The United States of America Police Crime Database</h1>
+	<br><br><br><br>
+</div>
+ 
+<div class="bottomSection">
+	<form action="/">
+	  <label>Officer ID               </label><input type="text" id="offId" name="Officer ID" placeholder="Enter Officer ID..."><br><br>
+	  <label>Officer First Name       </label><input type="text" id="firstName" name="Officer First Name" placeholder="Enter Officer First Name..."><br><br>
+	  <label>Officer Last Name        </label><input type="text" id="lastName" name="Officer Last Name" placeholder="Enter Officer Last Name..."><br><br>
+	  <label>Officer State            </label><input type="text" id="offState" name="Officer State" placeholder="Enter Officer State..."><br><br>
+	  <label>Officer Age              </label><input type="text" id="offAge" name="Officer Age" placeholder="Enter Officer Age..."><br><br>
+	  <label>Officer Ethnicity        </label><input type="text" id="offEth" name="Officer Ethnicity" placeholder="Enter Officer Ethnicity..."><br><br>
+	  <label>Officer Time on Force    </label><input type="text" id="offTime" name="Officer Time on Force" placeholder="Enter Officer Officer State..."><br><br>	
+	  <label>Crime Description        </label><input type="text" id="crDesc" name="Crime Description" placeholder="Enter Crime Description..."><br><br>
+	  <label>Crime Category           </label><input type="text" id="crCat" name="Crime Category" placeholder="Enter Crime Category..."><br><br>
+	  <label>Officer Punishment       </label><input type="text" id="offPun" name="Officer Punishment" placeholder="Enter Officer Punishment..."><br><br>
+	  <label>Officer Current Status   </label><input type="text" id="offStat" name="Officer Current Status" placeholder="Enter Officer Current Status..."><br><br>
+	  <label>Victim First Name        </label><input type="text" id="victFirstName" name="Victim First Name" placeholder="Enter Victim First Name..."><br><br>
+	  <label>Victim Last Name         </label><input type="text" id="victLastName" name="Victim Last Name" placeholder="Enter Victim Last Name..."><br><br>
+	  <label>Victim Age               </label><input type="text" id="vAge" name="Victim Age" placeholder="Enter Victim Age..."><br><br>
+	  <label>Victim Ethniticity       </label><input type="text" id="vEth" name="Victim Ethniticity" placeholder="Enter Victim Ethnicity..."><br><br>
+	  <label>Other Details            </label><input type="text" id="other" name="Other Details" placeholder="Other Details..."><br><br><br>
+	  <input type="submit" value="Submit" onClick="saveData()">	 
+	  <br><br><br> 
+	</form>
+</div>
+</body>
+</html>
+

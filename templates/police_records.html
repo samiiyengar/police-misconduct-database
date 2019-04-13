@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-}
-td, th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-tr:nth-child(even) {
-    background-color: #dddddd;
-}
-</style>
 <head>
-    <meta charset="UTF-8">
-    <title>Employees</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="/static/myScript.js" charset="utf-8"></script>
 </head>
-<body>
+
+<body >
+<div class="row">
+  <div class="topSection" style="background-color:#ddd;">
+    <nav class="navbar navbar-inverse">	
+	<div class="container-fluid">
+	
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+		<li class="active"><a href="/">Home</a></li>
+	  </ul>
+    </div>
+  </div>
+  </nav>
+  </div>
+</div>
+
+<div class="bodyHdr">
+    <h1  style="color:black;font-size:250%;font-family: 'Open Sans', Sans-serif;text-align:center;">The United States of America Police Crime Database</h1>
+    <br><br><br><br>
+</div>
+ 
+<div class="center">
 <table id="employees" style="width:100%">
     {% if result %}
     <tr>
@@ -27,17 +48,23 @@ tr:nth-child(even) {
         <th>Officer First Name</th>
         <th>Officer Last Name</th>
         <th>Officer State</th>
+        <th>Office County</th>
         <th>Officer Age</th>
-        <th>Officer Ethnicity</th>
+        <th>Officer Race</th>
+        <th>Officer Sex</th>
+        <th>Officer Rank</th>
         <th>Officer Time on Force</th>
         <th>Crime Description</th>
         <th>Crime Category</th>
-        <th>Officer Punishment</th>
+        <th>Officer Arrest Date</th>
+        <th>Officer Conviction</th>
         <th>Officer Current Status</th>
         <th>Victim First Name</th>
         <th>Victim Last Name</th>
         <th>Victim Age</th>
-        <th>Victim Ethnicity</th>
+        <th>Victim Race</th>
+        <th>Victim Sex</th>
+        <th>Victim/Officer Relationship</th>
         <th>Other Details</th>
     </tr>
     {% for row in result %}
@@ -46,21 +73,28 @@ tr:nth-child(even) {
         <td> {{row.officer_first_name }} </td>
         <td> {{row.officer_last_name }} </td>
         <td> {{row.officer_state}} </td>
+        <td> {{row.officer_county}} </td>
         <td> {{row.officer_age}} </td>
-        <td> {{row.officer_ethnicity}} </td>
+        <td> {{row.officer_race}} </td>
+        <td> {{row.officer_sex}} </td>
+        <td> {{row.officer_rank}} </td>
         <td> {{row.officer_time_on_force}} </td>
         <td> {{row.crime_description}} </td>
         <td> {{row.crime_category}} </td>
-        <td> {{row.officer_punishment}} </td>
+        <td> {{row.officer_arrest_date}} </td>
+        <td> {{row.officer_conviction}} </td>
         <td> {{row.officer_current_status}} </td>
         <td> {{row.victim_first_name}} </td>
         <td> {{row.victim_last_name}} </td>
         <td> {{row.victim_age}} </td>
-        <td> {{row.victim_ethnicity}} </td>
+        <td> {{row.victim_race}} </td>
+        <td> {{row.victim_sex}} </td>
+        <td> {{row.victim_officer_relationship}}
         <td> {{row.other_details}} </td>
     </tr>
     {% endfor %}
     {% endif %}
 </table>
+</div>
 </body>
 </html>

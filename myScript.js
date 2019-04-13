@@ -7,6 +7,7 @@ function onClickAbout(elem) {
 
 function closeForm() {
   document.getElementById("loginPopup").style.display = "none";
+  GoToHomePage();
   window.location.reload();
 }
 
@@ -19,6 +20,11 @@ $(document).ready(function(){
 });
 
 function GoToHomePage()
-  {
+{
     window.location = '/';   
-  }
+}
+
+
+function saveData() {
+	return true;
+}

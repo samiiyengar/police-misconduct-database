@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!--<title>Police misconduct database</title>-->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Basic stylesheet includes DO NOT REMOVE-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/static/style.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
   <script src="/static/myScript.js" charset="utf-8"></script>
- 
-  
 </head>
+
 <body >
 <div class="row">
   <div class="topSection" style="background-color:#ddd;">
@@ -30,29 +27,8 @@
 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-		<li class="active"><a href="#">Home</a></li>
-        <li><a href=href="#" data-toggle="modal" data-target="#loginPopup">Update Database</a></li>
-		<div class="modal fade" id="loginPopup" role="dialog">
-			<form class="login-modal-content animate"  action="/login">
-			<div class="container">
-				<h3>Enter admin credentials</h3>
-				<br>
-				<div>
-					<label for="username">Username:</label>
-					<input type="text" placeholder="Enter Username" id="username" name="username" minlength="6" required>
-				</div>
-				<br>
-
-				<div>
-					<label for="pass">Password:</label>
-					<input type="password" placeholder="Enter Password" id="pass" name="password" minlength="8" required>
-				</div>
-				<br>
-				<button type="submit">Sign in</button>
-				<button type="button" onclick="closeForm()" class="cancelbtn">Cancel</button>
-			</div>
-			</form>
-		</div> 	
+		<li class="active"><a href="/">Home</a></li>
+		<li><a href="/updateDatabase">Update Database</a></li>
 		 <li><a href="#" data-toggle="modal" data-target="#idAbout"> About</a></li>
 			<div class="modal fade" id="idAbout" role="dialog">
 				<!-- Modal content-->
@@ -62,13 +38,15 @@
 							<h4 class="modal-title">About this site</h4>
 						</div>
 						<div class="modal-body">
-							<p>This site provides a mechanism to check background information on officers.</p>
-							<p>Disclaimer:- The way to use the site and it's information is left to the discretion of the user.</p>
+							<p>Incidents of officer-related misconduct are rising in number with every passing year - seeing this, I decided to create this site, with the hope that I could show how easy it would be for this information, which is all already public record, to be organized an accessible by Americans everywhere. This site provides a means by which users can check records of individual officers for incidents of misconduct.</p>
+							<br><br>
+							<p style="color:red;">Disclaimer: This site is ONLY for the purposes of my senior project, and is not meant to be used as an official source of information regarding officer misconduct.</p>
 							</p>
 							</p>
 							</p>
 							</p>
-							<p style="color:green;">Author:- Sami Iyengar</p>
+							<br><br>
+							<p style="color:green;">Created by Sami Iyengar</p>
 						</div>
 
 					</div>
@@ -82,8 +60,7 @@
 </div>
 
 <div class="bodyHdr">
-	<h1  style="color:black;font-size:250%;font-family: serif;text-align:center;">Police Misconduct Database</h1>
-	<p style="color:black;text-align:center;">A nationwide database of police enrollment records</p>
+	<h1  style="color:black;font-size:250%;font-family: 'Open Sans', Sans-serif;text-align:center;">The United States of America Police Crime Database</h1>
 	<br><br><br><br>
 </div>
  
@@ -91,7 +68,8 @@
 	<div class=column>
 	
 		<a href="/search/id">
-			<img border="0" class=image1 src="/static/search_icon.png" alt="Avatar">
+			<img border="0" class=image1 src="/static/id_icon.png" alt="Avatar">
+			<figcaption>Search by ID</figcaption>
 		</a>
 	
 	</div>
@@ -99,8 +77,9 @@
 
 	<div class=column>
 	
-		<a href="/search/location">
+		<a href="/search/map">
 			<img border="0" class=image1 src="/static/location_icon.png" alt="Avatar">
+			<figcaption>Search by State</figcaption>
 		</a>
 	
 	</div>
@@ -109,8 +88,11 @@
 	
 		<a href="/search/lastName">
 			<img border="0" class=image1 src="/static/name_icon.png" alt="Avatar">
+			<figcaption>Search by Last Name</figcaption>
 		</a>
 	 
+	</div>
+	<div class=column>
 	</div>
 </div>
 
