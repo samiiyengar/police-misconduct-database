@@ -1,11 +1,5 @@
-function onClickAbout(elem) {
-      elem.style.background = "white";
-      elem.style.display='block';
-      elem.height = 100;
-      elem.width = 500;
-}
+//this file would be used to add code for actions on the HTML page
 
-function closeForm() {
-  document.getElementById("loginPopup").style.display = "none";
-  window.location.reload();
+function saveData() {
+	return true;
 }
