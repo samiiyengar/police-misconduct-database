@@ -8,7 +8,7 @@ class Database:
 		host = "127.0.0.1"
 		user = "root"
 		password = "bisvseniorproject"
-		db = "POLICE_RECORDS"
+		db = "Police_Records"
 		self.con = pymysql.connect(host=host, user=user, password=password, db=db, cursorclass=pymysql.cursors.
 								   DictCursor)
 		self.cur = self.con.cursor()
@@ -49,7 +49,7 @@ class Database:
 @app.route("/search/lastName", methods=['POST', 'GET'])
 def searchLastName():
 	if request.method == 'GET':
-		return render_template("lastName.html")
+		return render_template("lastname.html")
 	dict = request.form
 	for key in dict:
 		print ('form key %s' % dict[key])
@@ -134,6 +134,6 @@ def main():
 	
 if __name__ == "__main__":
 	app.secret_key = os.urandom(12)
-	app.run()
+	app.run(host='0.0.0.0', port=5000)
 
 
